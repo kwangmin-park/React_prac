@@ -16,11 +16,11 @@ const ImmerComponent = () => {
     const onChange = useCallback(
         e=> {
             const {name, value} = e.target;
-            setForm(produce(form, draft => {
+            setForm(produce(draft => {
                 draft[name] = value;
             }));
         },
-        [form]
+        []
     );
 
     const onSubmit = useCallback(
@@ -32,7 +32,7 @@ const ImmerComponent = () => {
                 username: form.username
             };
 
-            setData(produce(data, draft => {
+            setData(produce(draft => {
                 draft.array.push(info);
             }));
 
@@ -41,16 +41,16 @@ const ImmerComponent = () => {
                 username: ''
             });
             nextId.current += 1;
-        },[data, form.name, form.username]
+        },[form.name, form.username]
     );
 
     const onRemove = useCallback(
         id => {
-            setData(produce(data, draft => {
+            setData(produce(draft => {
                 draft.array.splice(draft.array.findIndex(info => info.id === id), 1);
             }));
         },
-        [data]
+        []
     );
 
     return (
