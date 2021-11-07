@@ -3,10 +3,12 @@ import React from "react";
 import './App.css';
 import Say from './ch4/Say';
 import EventPractice from "./ch4/EventPractice";
+import ImmerComponent from "./ch11/ImmerComponent";
 
 function App() {
   return (
-      <EventPractice />
+      <ImmerComponent/>
+      // <EventPractice />
       // <Say></Say>
 
     // <div className="App">
