@@ -7,7 +7,8 @@ import ImmerComponent from "./ch11/ImmerComponent";
 
 function App() {
   return (
-      <ImmerComponent/>
+
+      // <ImmerComponent/>
       // <EventPractice />
       // <Say></Say>
 
