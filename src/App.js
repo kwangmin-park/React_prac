@@ -9,15 +9,23 @@ import axios from "axios";
 import ColorBox from "./ch15/ColorBox";
 import ColorContext, {ColorProvider} from "./ch15/color";
 import SelectColors from "./ch15/SelectColors";
+import Counter from "./ch16/components/Counter";
+import Todos from "./ch16/components/Todos";
+import CounterContainer from "./ch16/containers/CounterContainer";
 
 function App() {
     return (
-        <ColorProvider value={{color: 'red'}}>
-            <div>
-                <SelectColors/>
-                <ColorBox/>
-            </div>
-        </ColorProvider>
+        <div>
+            <CounterContainer/>
+            <hr/>
+            <Todos/>
+        </div>
+        // <ColorProvider value={{color: 'red'}}>
+        //     <div>
+        //         <SelectColors/>
+        //         <ColorBox/>
+        //     </div>
+        // </ColorProvider>
         // <AxiosPrac></AxiosPrac>
 
         // <ImmerComponent/>
